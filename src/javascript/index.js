@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    accionParaElClick = function(event) {
-        $(this).text("Bémeme");
+    let solicitudes = ["Mensaje1", "Hola", "Adios"];
+
+    for (i = 0 ; i < solicitudes.length; i++ ) {
+        $("#maestro").append(
+            $("<li>").text(solicitudes[i])
+        );
     }
-
-    $("button").on("click", accionParaElClick);
-
-    console.log('Hola mundo... por tercera vez');
 });
