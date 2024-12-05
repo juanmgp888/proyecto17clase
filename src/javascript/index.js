@@ -1,5 +1,9 @@
-document.getElementById('boton').onclick = function() {
-    document.getElementById('boton').innerText = 'Ya me has comido<br>En otra línea';
-}
+$(document).ready(function() {
+    accionParaElClick = function(event) {
+        $(this).text("Bémeme");
+    }
 
-console.log('Hola mundo... por tercera vez');
+    $("button").on("click", accionParaElClick);
+
+    console.log('Hola mundo... por tercera vez');
+});
