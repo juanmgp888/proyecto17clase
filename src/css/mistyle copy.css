@@ -1,0 +1,35 @@
+/* Con GRID en lugar de con FLEXBOX*/
+
+.grid-container{
+    display:grid;
+    grid-template-columns: auto auto auto;/* ancho de cada columna. Si necesito más columnas, añado otro auto u otro % 33.333% 33.333% 33.333%; */
+    grid-template-rows: 40px 40px auto; /* altura de cada fila y relleno auto del resto */
+    grid-template-areas:
+        "c1 c2 c3"  /* Primera fila: tres columnas ... <div class="c1" ...*/
+        "c4 c5 .";  /* Segunda fila: dos columnas */
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%; /* del ancho total de la pantalla */
+    height: 100vh; 
+    
+    /*margin: 0 auto; /* centrado */
+    
+}
+
+body{
+    background-color: rgb(199, 198, 198);
+}
+.celda{
+    border: 1px solid rgb(170, 170, 170);
+    text-align: center;
+}
+
+button{
+    width:100px;
+    height:35px;
+}
+.mio{
+    background-color: rgb(35, 221, 10);
+}
+
+
