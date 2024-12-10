@@ -1,13 +1,17 @@
 $(function() {
     console.log('Paso por aquí');
     $("#listar").on("click", function() {
+
         $.get("https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes", function(data) {
+            $("#resListar").addClass("mio");  
             $("#resListar").text("Ok");
+    
             console.log(data);
         })
         
     });
-    $("#leer").on("click", function() {                                         // leer el primero
+    $("#leer").on("click", function() {   
+        $("#resLeer").addClass("mio");                                      // leer el primero
         $.get("https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes/1", function(data) {
             $("#resLeer").text("Ok"); 
             console.log(data);
@@ -17,6 +21,7 @@ $(function() {
             url:"https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes/1",
             type: "DELETE",
             success: function(data){
+                $("#resBorrar").addClass("mio");
                 $("#resBorrar").text("OK");
                 console.log('borrado'+data);
             },
