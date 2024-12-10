@@ -1,7 +1,12 @@
+.row{
+  /*  justify-content: space-evenly;*/ 
+    display:flex;
+    justify-items:flex-start;
+    
+}
 button{
-    font-size: large;
+    border-radius: 5px;
 }
 .mio{
     background-color: rgb(35, 221, 10);
-    
 }
